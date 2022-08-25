@@ -28,8 +28,6 @@ steps:
     files:
     - "dist/artifacts/*"
   when:
-    instance:
-    - drone-publish.rancher.io
     ref:
     - refs/head/master
     - refs/tags/*
@@ -71,8 +69,6 @@ steps:
     files:
     - "dist/artifacts/*"
   when:
-    instance:
-    - drone-publish.rancher.io
     ref:
     - refs/head/master
     - refs/tags/*
