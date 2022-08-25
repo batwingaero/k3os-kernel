@@ -1,0 +1,13 @@
+diff -urbB kernel.unpatched/debian.master/config/annotations kernel.sensors-aaeon/debian.master/config/annotations
+--- kernel.unpatched/debian.master/config/annotations	2022-08-04 17:16:56.000000000 +0000
++++ kernel.sensors-aaeon/debian.master/config/annotations	2022-08-13 01:21:29.477633005 +0000
+@@ -2856,7 +2856,7 @@
+ CONFIG_STM_SOURCE_FTRACE
+ # Menu: Device Drivers >> Hardware Monitoring support
+ CONFIG_HWMON                                    policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 's390x': 'n'}>
+ CONFIG_HWMON_DEBUG_CHIP                         policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n'}>
+-CONFIG_SENSORS_AAEON                            policy<{'amd64': 'm'}>
++CONFIG_SENSORS_AAEON                            policy<{'amd64': '-'}>
+ CONFIG_SENSORS_ABITUGURU                        policy<{'amd64': 'm'}>
+ CONFIG_SENSORS_ABITUGURU3                       policy<{'amd64': 'm'}>
+ CONFIG_SENSORS_AD7314                           policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>

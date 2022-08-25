@@ -1,0 +1,13 @@
+diff -urbB kernel.unpatched/debian.master/config/annotations kernel.leds-aaeon/debian.master/config/annotations
+--- kernel.unpatched/debian.master/config/annotations	2022-08-04 17:16:56.000000000 +0000
++++ kernel.leds-aaeon/debian.master/config/annotations	2022-08-13 01:21:29.477633005 +0000
+@@ -4213,7 +4213,7 @@
+ CONFIG_USERIO
+
+ # Menu: Device Drivers >> LED Support
+ CONFIG_NEW_LEDS                                 policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 's390x': 'n'}>
+-CONFIG_LEDS_AAEON                               policy<{'amd64': 'm'}>
++CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
+
+ # Menu: Device Drivers >> LED Support >> LED Class Support
+ CONFIG_LEDS_CLASS                               policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y'}>
