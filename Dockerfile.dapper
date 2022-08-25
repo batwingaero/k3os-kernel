@@ -1,10 +1,11 @@
-ARG APT_GCC=library/gcc:9.2
-
-FROM library/ubuntu:bionic AS bionic
+ARG BUILD=library/buildpack-deps:jammy
+ARG UBUNTU=library/ubuntu:jammy
 ARG DOWNLOADS=/usr/src/downloads
-ARG LINUX_FIRMWARE=linux-firmware=1.173.18
-ARG LINUX_SOURCE=linux-source-5.0.0=5.0.0-47.51~18.04.1
 
+FROM ${UBUNTU} AS ubuntu
+ARG DOWNLOADS
+ARG LINUX_FIRMWARE=linux-firmware=20220329.git681281e4-0ubuntu3.4
+ARG LINUX_SOURCE=linux-source-5.15.0=5.15.0-46.49
 ENV DEBIAN_FRONTEND=noninteractive
 RUN set -x \
  && apt-get --assume-yes update \
@@ -15,32 +16,37 @@ RUN set -x \
  && mv -vf linux-firmware* ${DOWNLOADS}/ubuntu-firmware.deb \
  && mv -vf linux-source* ${DOWNLOADS}/ubuntu-kernel.deb
 
-FROM ${APT_GCC}
-ARG DOWNLOADS=/usr/src/downloads
-# Wireguard support, included in Linux in 5.6+
-ARG WG_URL="https://git.zx2c4.com"
-ARG WG_REPO="wireguard-linux-compat"
-ARG WG_TAG=v1.0.20200413
-COPY --from=bionic ${DOWNLOADS}/ ${DOWNLOADS}/
-RUN apt-get update \
- && apt-get install -y \
-    kernel-wedge \
-    libncurses-dev \
-    fakeroot \
-    cpio \
-    bison \
-    flex \
-    ccache \
-    vim \
-    gnupg2 \
-    locales \
+FROM ${BUILD}
+ARG DOWNLOADS
+COPY --from=ubuntu ${DOWNLOADS}/ ${DOWNLOADS}/
+RUN apt-get --assume-yes update \
+ && apt-get --assume-yes install --no-install-recommends --upgrade \
     bc \
-    kmod \
-    libelf-dev \
-    rsync \
+    bison \
+    ccache \
+    cpio \
+    dkms \
+    dwarves \
+    fakeroot \
+    flex \
     gawk  \
+    gcc-9 \
+    gnupg2 \
+    kernel-wedge \
+    kmod \
+    less \
+    libelf-dev \
+    libiberty-dev \
+    liblz4-tool \
+    libncurses-dev \
+    libpci-dev \
+    libssl-dev \
     libudev-dev \
-    pciutils-dev \
+    linux-libc-dev \
+    locales \
+    rsync \
+    vim \
+    zstd \
  && rm -f /bin/sh && ln -s /bin/bash /bin/sh
 
 ########## Dapper Configuration #####################
@@ -50,16 +56,15 @@ ENV DAPPER_DOCKER_SOCKET true
 ENV DAPPER_SOURCE /source
 ENV DAPPER_OUTPUT ./dist ./build
 ENV DAPPER_RUN_ARGS --privileged
-ENV SHELL /bin/bash
+ENV EDITOR=vim \
+    PAGER=less \
+    SHELL=/bin/bash
 WORKDIR ${DAPPER_SOURCE}
 
 ########## General Configuration #####################
 ARG DAPPER_HOST_ARCH
 ENV ARCH $DAPPER_HOST_ARCH
 ENV DOWNLOADS ${DOWNLOADS}
-ENV WG_URL=${WG_URL}
-ENV WG_REPO=${WG_REPO}
-ENV WG_TAG=${WG_TAG}
 
 ENTRYPOINT ["./scripts/entry"]
 CMD ["ci"]

@@ -1,0 +1,13 @@
+diff -urbB kernel.unpatched/debian.master/config/annotations kernel.gpio-aaeon/debian.master/config/annotations
+--- kernel.unpatched/debian.master/config/annotations	2022-08-04 17:16:56.000000000 +0000
++++ kernel.gpio-aaeon/debian.master/config/annotations	2022-08-13 01:21:29.477633005 +0000
+@@ -1962,7 +1962,7 @@
+ CONFIG_GPIO_MSC313
+ CONFIG_GPIO_EM                                  note<h/w not encounted>
+
+ # Menu: Device Drivers >> GPIO Support >> PCI GPIO expanders
+-CONFIG_GPIO_AAEON                               policy<{'amd64': 'm'}>
++CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
+ CONFIG_GPIO_AMD8111                             policy<{'amd64': 'm'}>
+ CONFIG_GPIO_BT8XX                               policy<{'s390x': 'm'}>
+ CONFIG_GPIO_MLXBF                               policy<{'arm64': 'm'}>
