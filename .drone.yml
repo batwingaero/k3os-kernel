@@ -8,7 +8,7 @@ platform:
 
 steps:
 - name: build
-  image: rancher/dapper:v0.4.2
+  image: rancher/dapper:v0.6.0
   commands:
   - dapper ci
   volumes:
@@ -49,7 +49,7 @@ platform:
 
 steps:
 - name: build
-  image: rancher/dapper:v0.4.2
+  image: rancher/dapper:v0.6.0
   commands:
   - dapper ci
   volumes:
