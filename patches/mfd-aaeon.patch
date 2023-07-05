@@ -1,0 +1,12 @@
+diff -urbB kernel.unpatched/debian.master/config/annotations kernel.mfd-aaeon/debian.master/config/annotations
+--- kernel.unpatched/debian.master/config/annotations	2023-07-05 18:56:36.151256013 +0000
++++ kernel.aaeon-iwmi-wdt/debian.master/config/annotations	2023-07-05 19:03:27.153523008 +0000
+@@ -7138,7 +7138,7 @@
+ CONFIG_MFD_88PM800                              policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 's390x': 'n'}>
+ CONFIG_MFD_88PM805                              policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 's390x': 'n'}>
+ CONFIG_MFD_88PM860X                             policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y'}>
+-CONFIG_MFD_AAEON                                policy<{'amd64': 'm'}>
++CONFIG_MFD_AAEON                                policy<{'amd64': 'n'}>
+ CONFIG_MFD_AAT2870_CORE                         policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y'}>
+ CONFIG_MFD_AC100                                policy<{'arm64': 'n'}>
+ CONFIG_MFD_ACER_A500_EC                         policy<{'armhf-generic': 'm'}>

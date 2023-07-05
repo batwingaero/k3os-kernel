@@ -1,0 +1,12 @@
+diff -urbB kernel.unpatched/debian.master/config/annotations kernel.aaeon-iwmi-wdt/debian.master/config/annotations
+--- kernel.unpatched/debian.master/config/annotations	2023-07-05 18:56:36.151256013 +0000
++++ kernel.aaeon-iwmi-wdt/debian.master/config/annotations	2023-07-05 19:03:27.153523008 +0000
+@@ -847,7 +847,7 @@
+ CONFIG_9P_FS_POSIX_ACL                          policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+ CONFIG_9P_FS_SECURITY                           policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+ CONFIG_A11Y_BRAILLE_CONSOLE                     policy<{'amd64': 'n', 'arm64': 'n', 'armhf': 'n', 'ppc64el': 'n'}>
+-CONFIG_AAEON_IWMI_WDT                           policy<{'amd64': 'm'}>
++CONFIG_AAEON_IWMI_WDT                           policy<{'amd64': 'n'}>
+ CONFIG_ABP060MG                                 policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
+ CONFIG_AC97_BUS                                 policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'y', 'ppc64el': 'm'}>
+ CONFIG_ACENIC                                   policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
