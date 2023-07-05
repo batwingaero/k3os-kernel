@@ -6,7 +6,7 @@ diff -urbB kernel.unpatched/debian.master/config/annotations kernel.gpio-aaeon/d
  CONFIG_GPIO_74X164                              policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
  CONFIG_GPIO_74XX_MMIO                           policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
 -CONFIG_GPIO_AAEON                               policy<{'amd64': 'm'}>
-+CONFIG_GPIO_AAEON                               policy<{'amd64': 'n'}>
++CONFIG_GPIO_AAEON                               policy<{'amd64': '-'}>
  CONFIG_GPIO_ACPI                                policy<{'amd64': 'y', 'arm64': 'y'}>
  CONFIG_GPIO_ADNP                                policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
  CONFIG_GPIO_ADP5520                             policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>

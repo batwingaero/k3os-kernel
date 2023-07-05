@@ -6,7 +6,7 @@ diff -urbB kernel.unpatched/debian.master/config/annotations kernel.leds-aaeon/d
  CONFIG_LD_VERSION                               policy<{'amd64': '23800', 'arm64': '23800', 'armhf': '23800', 'ppc64el': '23800', 's390x': '23800'}>
  CONFIG_LEDS_88PM860X                            policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
 -CONFIG_LEDS_AAEON                               policy<{'amd64': 'm'}>
-+CONFIG_LEDS_AAEON                               policy<{'amd64': 'n'}>
++CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
  CONFIG_LEDS_AAT1290                             policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
  CONFIG_LEDS_ACER_A500                           policy<{'armhf-generic': 'm'}>
  CONFIG_LEDS_ADP5520                             policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
