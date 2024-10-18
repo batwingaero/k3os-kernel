@@ -1,13 +1,12 @@
 diff -urbB kernel.unpatched/debian.master/config/annotations kernel.mfd-aaeon/debian.master/config/annotations
---- kernel.unpatched/debian.master/config/annotations	2022-08-04 17:16:56.000000000 +0000
-+++ kernel.mfd-aaeon/debian.master/config/annotations	2022-08-13 01:21:29.477633005 +0000
-@@ -4977,7 +4977,7 @@
- CONFIG_MFD_ATC260X_I2C
- CONFIG_MFD_KHADAS_MCU                           policy<{'arm64': 'm', 'armhf': 'm'}>
- CONFIG_MFD_ACER_A500_EC                         policy<{'armhf-generic': 'm'}>
- CONFIG_MFD_QCOM_PM8008                          policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
+--- kernel.unpatched/debian.master/config/annotations	2024-09-27 17:21:42.000000000 +0000
++++ kernel.mfd-aaeon/debian.master/config/annotations	2024-10-15 17:25:25.167462979 +0000
+@@ -7162,7 +7162,7 @@
+ CONFIG_MFD_88PM800                              policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 's390x': 'n'}>
+ CONFIG_MFD_88PM805                              policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 's390x': 'n'}>
+ CONFIG_MFD_88PM860X                             policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y'}>
 -CONFIG_MFD_AAEON                                policy<{'amd64': 'm'}>
 +CONFIG_MFD_AAEON                                policy<{'amd64': '-'}>
- CONFIG_MFD_VEXPRESS_SYSREG                      policy<{'arm64': 'y', 'armhf': 'y'}>
- CONFIG_RAVE_SP_CORE                             policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm', 's390x': 'n'}>
- CONFIG_MFD_INTEL_M10_BMC                        policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
+ CONFIG_MFD_AAT2870_CORE                         policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y'}>
+ CONFIG_MFD_AC100                                policy<{'arm64': 'n'}>
+ CONFIG_MFD_ACER_A500_EC                         policy<{'armhf-generic': 'm'}>

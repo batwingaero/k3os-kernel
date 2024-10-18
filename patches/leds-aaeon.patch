@@ -1,13 +1,12 @@
 diff -urbB kernel.unpatched/debian.master/config/annotations kernel.leds-aaeon/debian.master/config/annotations
---- kernel.unpatched/debian.master/config/annotations	2022-08-04 17:16:56.000000000 +0000
-+++ kernel.leds-aaeon/debian.master/config/annotations	2022-08-13 01:21:29.477633005 +0000
-@@ -4213,7 +4213,7 @@
- CONFIG_USERIO
-
- # Menu: Device Drivers >> LED Support
- CONFIG_NEW_LEDS                                 policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y', 's390x': 'n'}>
+--- kernel.unpatched/debian.master/config/annotations	2024-09-27 17:21:42.000000000 +0000
++++ kernel.leds-aaeon/debian.master/config/annotations	2024-10-15 17:25:25.167462979 +0000
+@@ -6690,7 +6690,7 @@
+ CONFIG_LD_ORPHAN_WARN                           policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y'}>
+ CONFIG_LD_VERSION                               policy<{'amd64': '23800', 'arm64': '23800', 'armhf': '23800', 'ppc64el': '23800', 's390x': '23800'}>
+ CONFIG_LEDS_88PM860X                            policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
 -CONFIG_LEDS_AAEON                               policy<{'amd64': 'm'}>
 +CONFIG_LEDS_AAEON                               policy<{'amd64': '-'}>
-
- # Menu: Device Drivers >> LED Support >> LED Class Support
- CONFIG_LEDS_CLASS                               policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'ppc64el': 'y'}>
+ CONFIG_LEDS_AAT1290                             policy<{'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
+ CONFIG_LEDS_ACER_A500                           policy<{'armhf-generic': 'm'}>
+ CONFIG_LEDS_ADP5520                             policy<{'amd64': 'm', 'arm64': 'm', 'armhf': 'm', 'ppc64el': 'm'}>
